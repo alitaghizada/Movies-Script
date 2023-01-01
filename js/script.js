@@ -33,7 +33,7 @@ showMyDB();
 
 function writeYourGenres() {
     for (let i = 1; i <= 3; i++) {
-        let favoriteGenre = prompt(`Ваш любимый жанр под номером ${i}: `)
+        let favoriteGenre = prompt(`Ваш любимый жанр под номером ${i}: `);
         personalMovieDB.genres.push(favoriteGenre);
     }
 }
@@ -51,14 +51,14 @@ function rememberMyFilms() {
         lastWatchedMovies = prompt("Один из последних просмотренных фильмов? Если хотите прервать - введите 'q'");
         if (lastWatchedMovies == 'q') {break;}
         if (lastWatchedMovies.length <= 0 || lastWatchedMovies == " "){
-            alert("Нельзя вводить пустое значение.")
+            alert("Нельзя вводить пустое значение.");
             continue;
         }
     
         ratingLastWatchedMovies = +prompt("На сколько оцените его?");
         if (ratingLastWatchedMovies == 0) {break;}
         if (ratingLastWatchedMovies.length <= 0 || ratingLastWatchedMovies == " "){
-            alert("Нельзя вводить пустое значение.")
+            alert("Нельзя вводить пустое значение.");
             continue;
         }
         personalMovieDB.movies[lastWatchedMovies] = ratingLastWatchedMovies;
@@ -69,13 +69,13 @@ rememberMyFilms();
 
 function detectPersonalLevel() {
     if (personalMovieDB.count < 10) {
-        alert("Просмотрено довольно мало фильмов.")
+        alert("Просмотрено довольно мало фильмов.");
     } else if (personalMovieDB.count >= 10 & personalMovieDB.count <= 30) {
-        alert("Вы классический зритель!")
+        alert("Вы классический зритель!");
     } else if (personalMovieDB.count > 30) {
-        alert("Вы киноман!")
+        alert("Вы киноман!");
     } else {
-        alert("Произошла ошибка.")
+        alert("Произошла ошибка.");
     }
 }
 
